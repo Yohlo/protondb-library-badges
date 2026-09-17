@@ -1,6 +1,6 @@
 {
   "name": "protondb-library",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "ProtonDB compatibility tiers in the desktop Steam library: inline game-page stat, sidebar indicators, and a tier section in the Library Filters panel.",
   "type": "module",
   "main": "./frontend/index.tsx",

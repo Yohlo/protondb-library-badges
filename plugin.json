@@ -3,6 +3,6 @@
   "name": "protondb-library",
   "common_name": "ProtonDB Library Badges",
   "description": "ProtonDB compatibility tiers in the desktop Steam library: inline game-page stat, sidebar indicators, and a tier section in the Library Filters panel.",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "backendType": "lua"
 }
