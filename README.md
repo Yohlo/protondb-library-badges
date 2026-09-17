@@ -16,7 +16,31 @@ A Millennium plugin that puts ProtonDB rankings at a glance in your Steam librar
 
 ### Images
 
-<!--screenshots-->
+
+##### Library Dots:
+
+![Steam Library list with ProtonDB rating dots to the left of the game thumbnail](images/library-dots.png)
+
+
+##### Toggle:
+
+![Steam Library filter/toggle row showing tooltip for ProtonDB dot toggle button](images/toggle.png)
+
+
+##### Play Bar:
+
+![Steam Library game page play bar with link to ProtonDB report](images/play-bar.png)
+
+
+##### Filters:
+
+![Steam Library filter menu with ProtonDB rating tier filters](images/filters.png)
+
+
+##### Dynamic Collections:
+
+![Steam Library dynamic collection fitler config with ProtonDB rating tier filters](images/dynamic-collection.png)
+
 
 ---
 
