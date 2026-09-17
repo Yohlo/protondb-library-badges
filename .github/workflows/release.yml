@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Package
+        run: |
+          version="$(node -p "require('./plugin.json').version")"
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::tag $GITHUB_REF_NAME does not match plugin.json version $version"
+            exit 1
+          fi
+          out="dist/protondb-library-badges"
+          mkdir -p "$out/.millennium/Dist"
+          cp plugin.json "$out/"
+          [ -f README.md ] && cp README.md "$out/"
+          cp -r backend "$out/"
+          cp .millennium/Dist/index.js "$out/.millennium/Dist/"
+          (cd dist && zip -r "../protondb-library-badges-v$version.zip" protondb-library-badges)
+
+      - uses: softprops/action-gh-release@v3
+        with:
+          files: protondb-library-badges-v*.zip
+          generate_release_notes: true
