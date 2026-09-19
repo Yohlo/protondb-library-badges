@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/src/sys/plugin-schema.json",
-  "name": "protondb-library",
+  "name": "protondb-library-badges",
   "common_name": "ProtonDB Library Badges",
   "description": "ProtonDB compatibility tiers in the desktop Steam library: inline game-page stat, sidebar indicators, and a tier section in the Library Filters panel.",
   "version": "1.0.0",
